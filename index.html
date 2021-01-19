@@ -6,116 +6,22 @@
     <title>Yearbook Site</title>
     <!-- To Import JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- To import fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
 
     <style>
-        .head{
-            text-align: center;
-        }
-        
-        .summ {
-            margin: 10px 0 20px 0;
-        }
-
-        table {
-            border: 1px solid;
-            border-collapse: collapse;
-        }
-
-        td,
-        th {
-            padding: 10px;
-            border: 1px solid;
-        }
-
-        .urgent {
-            color: red;
+        *{
+            font-family: 'Open Sans', sans-serif;
         }
     </style>
 
-    <script>
-        $(document).ready(function () {
-            $('#stats').empty();
-            stat();
-        });
-
-        function stat(){
-            $.ajax({
-                type: "GET",
-                url: "https://api.covid19api.com/summary",
-                data: {},
-                success: function (response) {
-                    let rows = response['Countries']
-                    for (let i = 0; i < rows.length; i++) {
-                        let country = rows[i]['Country']
-                        let TotalC = rows[i]['TotalConfirmed']
-                        let NewC = rows[i]['NewConfirmed']
-                        let TotalD = rows[i]['TotalDeaths']
-                        let NewD = rows[i]['NewDeaths']
-
-                        let temp_html = ``
-                        if (TotalD > TotalC/2) {
-                            temp_html = `<tr class="urgent">
-                                            <td>${country}</td>
-                                            <td>${TotalC}</td>
-                                            <td>${NewC}</td>
-                                            <td>${TotalD}</td>
-                                            <td>${NewD}</td>
-                                        </tr>`
-                        } else {
-                            temp_html = `<tr>
-                                <td>${country}</td>
-                                            <td>${TotalC}</td>
-                                            <td>${NewC}</td>
-                                            <td>${TotalD}</td>
-                                            <td>${NewD}</td>
-                                        </tr>`
-                        }
-
-                        $('#stats').append(temp_html);
-                    }
-                }
-            })
-        }
-
-    </script>
+   
 </head>
 
 
 <body>
-    <h1 class="head">COVID STATUS Around the Globe</h1>
-    <div class="summ">
-        <h2>Current Status of Covid-19</h2>
-        <p>Click Update Button to update the status</p>
-        <button onclick="up()">Update</button>
-        <hr>
-        <table>
-            <thead>
-                <tr>
-                    <td>Country Name</td>
-                    <td>Total Confirmed</td>
-                    <td>New Confirmed</td>
-                    <td>Total Deaths</td>
-                    <td>New Deaths</td>
-                </tr>
-            </thead>
-            <tbody id="stats">
-                <tr>
-                    <td>South Africa</td>
-                    <td>22</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>Japan</td>
-                    <td>16</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>Korea</td>
-                    <td>16</td>
-                    <td>0</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <h1>Hello World!</h1>
+    
 </body>
 </html>
