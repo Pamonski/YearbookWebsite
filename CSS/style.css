@@ -1,7 +1,11 @@
+/* For the font */
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* header design (Overflow==auto to include buttons) */
 header {
     background-color: grey;
-    font-family: 'Open Sans', sans-serif;
     padding: 10px;
     overflow: auto;
 }
