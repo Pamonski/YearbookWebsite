@@ -1,0 +1,32 @@
+/* header design (Overflow==auto to include buttons) */
+header {
+    background-color: grey;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    overflow: auto;
+}
+
+/* the 3 buttons floating left */
+.menuBtns {
+    float: left;
+}
+
+/* for the hero, temporary included border to clarify its size */
+.home {
+    width: 50%;
+    padding: 40px;
+    border: 1px solid red;
+}
+
+/* for the image in hero */
+.center {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+/* temporary for the slide show */
+.slideshow{
+    background-color: skyblue;
+    text-align: center;
+    height: 400px;
+}
