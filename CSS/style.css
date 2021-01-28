@@ -1,36 +1,67 @@
-/* For the font */
 * {
-    font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+/* For the font */
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
 /* header design (Overflow==auto to include buttons) */
-header {
-    background-color: grey;
-    padding: 10px;
-    overflow: auto;
+nav {
+  background-color: #040562;
+  height: 70px;
+  /* padding: 10px; */
+  overflow: auto;
+}
+
+label.logo {
+  float: left;
+  line-height: 70px;
+  padding: 0 50px;
+}
+
+nav ul {
+  float: left;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 /* the 3 buttons floating left */
 .menuBtns {
-    float: left;
+  float: left;
 }
 
 /* for the hero, temporary included border to clarify its size */
 .home {
-    width: 50%;
-    padding: 40px;
-    border: 1px solid red;
+  width: 50%;
+  padding: 40px;
+  border: 1px solid red;
 }
 
 /* for the image in hero */
 .center {
-    display: block;
-    margin: auto;
-    width: 50%;
+  display: block;
+  margin: auto;
+  width: 50%;
 }
 /* temporary for the slide show */
-.slideshow{
-    background-color: skyblue;
-    text-align: center;
-    height: 400px;
+.slideshow {
+  background-color: skyblue;
+  text-align: center;
+  height: 400px;
 }
