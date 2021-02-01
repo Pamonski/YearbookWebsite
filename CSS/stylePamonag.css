@@ -1,0 +1,144 @@
+@import url("fonts.css");
+
+html,
+body {
+  margin: 0%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  /* FONTS */
+  --OpenSansRegular: "OpenSansRegular", cursive;
+  --RobotoRegular: "RobotoRegular", cursive;
+  /* ----- */
+
+  /* COLORS */
+  --NavyBlue: #040562;
+  --Blue: #0247a1;
+  --LightBlue: #0077b8;
+  --LightYellow: #fece48;
+  --Orange: #ffb41f;
+  --White: #ffffff;
+  --Black: #000000;
+  /* ------ */
+}
+
+/* <!----------------------------------- GLOBAL CLASSES -----------------------------------> */
+a {
+  text-decoration: none;
+  color: var(--White);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* TO BE DETERMINED */
+h1 {
+  font-family: var(--OpenSansRegular);
+  font-size: 40px;
+}
+/* ---------------- */
+/* <!--------------------------------------------------------------------------------------> */
+
+/* <!----------------------------------- NAVIGATION -----------------------------------> */
+.nav {
+  background: var(--NavyBlue);
+  padding: 0.2rem;
+  height: 0rem;
+  min-height: 10vh;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu {
+  justify-content: space-between;
+}
+
+/* MOBILE SIDE */
+.nav .toggle-collapse {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  cursor: pointer;
+  display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.7rem 1rem;
+}
+
+.nav .toggle-collapse .toggle-icons i {
+  font-size: 1.4rem;
+  color: var(--NavyBlue);
+}
+
+.collapse {
+  height: 30rem;
+}
+/* ----------- */
+
+.nav .nav-items {
+  display: flex;
+  margin: 0;
+}
+
+.nav .nav-items .nav-link {
+  padding: 1.6rem 1rem;
+  /* CHANGE TO H3 */
+  font-size: 1.1rem;
+  /* ------------ */
+  position: relative;
+  font-family: var(--OpenSansRegular);
+}
+
+.nav .nav-items .nav-link:hover a {
+  color: var(--Orange);
+}
+
+.nav .nav-brand a {
+  font-size: 1.6rem;
+  padding: 1rem 1rem;
+  display: block;
+}
+
+.nav .social {
+  padding: 1.4rem 1rem;
+}
+
+.nav .social i {
+  padding: 0 0.2rem;
+}
+
+.nav .social i:hover {
+  color: var(--Orange);
+}
+/* <!----------------------------------------------------------------------------------> */
+
+/* <!----------------------------------- MAIN CONTENT -----------------------------------> */
+/* Site Title */
+
+/* ---------- */
+/* <!------------------------------------------------------------------------------------> */
+
+/* <!----------------------------------- VIEWPORT-750px -----------------------------------> */
+/* @media only screen and (max-width: 750px) {
+  .nav .nav-menu,
+  .nav .nav-items {
+    flex-direction: column;
+  }
+
+  .nav .toggle-collapse {
+    display: initial;
+  }
+} */
+/* <!--------------------------------------------------------------------------------------> */

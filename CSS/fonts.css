@@ -1,0 +1,16 @@
+/*------------------------ OPEN SANS ------------------------ */
+
+/* REGULAR */
+@font-face {
+  font-family: OpenSansRegular;
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+
+/*------------------------ --------- ------------------------ */
+
+/*------------------------ ROBOTO ------------------------ */
+@font-face {
+  font-family: RobotoRegular;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+/*------------------------ ------ ------------------------ */
