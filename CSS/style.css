@@ -16,7 +16,7 @@ nav {
   background-color: #040562;
   height: 70px;
   /* padding: 10px; */
-  overflow: auto;
+  overflow: hidden;
 }
 
 label.logo {
@@ -39,11 +39,7 @@ nav ul li a {
   color: white;
   font-size: 18px;
   text-transform: uppercase;
-}
-
-/* the 3 buttons floating left */
-.menuBtns {
-  float: left;
+  text-decoration: none;
 }
 
 /* for the hero, temporary included border to clarify its size */
@@ -59,9 +55,27 @@ nav ul li a {
   margin: auto;
   width: 50%;
 }
+
+/* the login button in hero */
+.loginBtn{
+  width: 40%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: orange;
+  color: white;
+}
+
 /* temporary for the slide show */
 .slideshow {
-  background-color: skyblue;
+  background-color: #040562;
+  color: white;
   text-align: center;
   height: 400px;
+}
+
+/* for footer */
+footer{
+  background-color: skyblue;
 }
