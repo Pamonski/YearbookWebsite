@@ -66,9 +66,16 @@ nav ul li a {
   background-color: orange;
   color: white;
 }
+
 /* temporary for the slide show */
 .slideshow {
-  background-color: skyblue;
+  background-color: #040562;
+  color: white;
   text-align: center;
   height: 400px;
+}
+
+/* for footer */
+footer{
+  background-color: skyblue;
 }

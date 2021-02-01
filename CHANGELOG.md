@@ -10,6 +10,7 @@
   - Removed .menuBtns
   - Changed overflow in nav from auto to hidden (auto adds scroll, idk why)
   - Added .loginBtn in style.css
+  - Changed slideshow background to #040562 and footer background to skyblue
 
 
 01/28/2021 [PAMONAG]
