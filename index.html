@@ -29,7 +29,8 @@
 <body>
     <!-- header, still need to include logo -->
     <header>
-        <nav>
+        <!-- id=navbar for the sticky function -->
+        <nav id="navbar">
             <label class="logo"><a href="#"><img src="images/50x50/logoWhite.png" alt="YearbookWebsite"></a></label>
             <ul>
                 <li><a href="#">ABOUT</a></li>
@@ -38,8 +39,8 @@
             </ul>
         </nav>
     </header>
-    <!-- the hero part -->
-    <div class="container">
+    <!-- the hero part, class=content for the sticky function -->
+    <div class="container content">
         <div class="row">
             <div class="col-sm home">
                 <h1>USC-CpE Batch 2020 Online Yearbook</h1>
@@ -63,6 +64,25 @@
     <footer>
         <h3 style="text-align: center;">footer</h3>
     </footer>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    
 </body>
 
 </html>

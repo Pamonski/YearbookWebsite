@@ -1,5 +1,13 @@
 # Changelog
 
+02/02/2021 [PARK]
+
+- Changes in index.html
+  - Added script for sticky navbar
+  - Added class (content) to hero, and id (navbar) to nav for sticky function
+- Changes in style.css
+  - Added .sticky and .sticky + .content in style.css
+
 02/01/2021 [PAMONAG]
 
 - OVERHAULED indexPamonag.html, please look at changes by visiting the code.
