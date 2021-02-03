@@ -1,4 +1,10 @@
 # Changelog
+02/02/2021 [LIM]
+
+- Created gallery.html
+- CSS folder
+  - Added gallery.css
+
 
 02/02/2021 [PARK]
 
