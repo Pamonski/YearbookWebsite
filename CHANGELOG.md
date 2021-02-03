@@ -8,6 +8,9 @@
 - Created about.html
 - images folder
   - Added Park.jpg for reference
+- index.html & about.html & gallery.html
+  - linked all.css
+  - linked each other
 
 02/03/2021 [LIM]
 

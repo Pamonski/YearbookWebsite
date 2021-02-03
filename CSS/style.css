@@ -119,3 +119,16 @@ footer{
 .about_name{
   padding: 20px;
 }
+
+/* for read more in about page */
+.about_button{
+  color: white;
+  float: right;
+  margin: 0px 0px 20px 0px;
+  bottom: 0;
+}
+
+/* Change color of read more in about page when hovered */
+.about_button:hover{
+  color: #ffb41f;
+}
