@@ -44,9 +44,7 @@ nav ul li a {
 
 /* for the hero, temporary included border to clarify its size */
 .home {
-  width: 50%;
   padding: 40px;
-  border: 1px solid red;
 }
 
 /* for the image in hero */
@@ -78,6 +76,9 @@ nav ul li a {
 /* for footer */
 footer{
   background-color: skyblue;
+  position: relative;
+  bottom: 0;
+  padding: 5px;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -89,5 +90,32 @@ footer{
 /* Add some top padding to the page content to prevent sudden quick movement 
 (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
-  padding-top: 70px;
+  padding-top: 120px;
+}
+
+/* slogan in about page */
+.about_slogan{
+  text-align: center;
+  padding: 20px;
+}
+/* for the image in about page */
+.about_face{
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 100px;
+}
+
+/* for the info below image in about page */
+.about_info{
+  text-align: center;
+  background-color: #040562;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* for names in about page */
+.about_name{
+  padding: 20px;
 }

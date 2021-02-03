@@ -1,5 +1,15 @@
 # Changelog
-02/02/2021 [LIM]
+
+02/03/2021 [PARK]
+- Changes in style.css
+  - Modified footer to stay at bottom
+  - Modified .home (deleted width:50% and border)
+  - Added css for about page (classes starts with .about)
+- Created about.html
+- images folder
+  - Added Park.jpg for reference
+
+02/03/2021 [LIM]
 
 - Created gallery.html
 - CSS folder
