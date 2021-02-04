@@ -151,24 +151,24 @@ figcaption {
   max-height: 100%;
 }
 
-.row {
+.rowG {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.row:after {
+.rowG:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.row > .col {
+.rowG > .colG {
   padding: 0 8px;
 }
 
 /* Create four equal columns that floats next to eachother */
-.col {
+.colG {
   float: left;
   width: 25%;
 }
