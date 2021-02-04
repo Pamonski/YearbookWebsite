@@ -22,7 +22,7 @@
     <!-- To import CSS file and fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/gallery.css">
+    <link rel="stylesheet" href="CSS/style.css">
 
 </head>
 
@@ -39,70 +39,50 @@
             </ul>
         </nav>
     </header>
-    
+
     <div class="row">
-        <div class="column"><figure>
-            <img src="images/logoLQBlack.png" alt="Logos 1" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-            <figcaption>Fig.1</figcaption>
+        <div class="col"><figure>
+            <img src="images/logoLQBlack.png" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="Black Logo">
+            <figcaption>Black Logo</figcaption>
         </figure></div>
-        <div class="column"><figure>
-            <img src="images/logoLQBlue.png" alt="Logos 2" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-            <figcaption>Fig.2</figcaption>
+        <div class="col"><figure>
+           <img src="images/logoLQBlue.png" onclick="openLightbox();toSlide(2)" class="hover-shadow preview" alt="Blue Logo">
+           <figcaption>Blue Logo</figcaption>
         </figure></div>
-        <div class="column"><figure>
-            <img src="images/logoLQBlack.png" alt="Logos 3" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-            <figcaption>Fig.3</figcaption>
-        </figure></div>
-        <div class="column"><figure>
-            <img src="images/logoLQBlue.png" alt="Logos 4" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-            <figcaption>Fig.4</figcaption>
+        <div class="col"><figure>
+           <img src="images/Park.jpg" onclick="openLightbox();toSlide(3)" class="hover-shadow preview" alt="Korean">
+           <figcaption>Korean</figcaption>
         </figure></div>
     </div>
-
-    <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
+      
+    <div id="Lightbox" class="modal">
+        <span class="close pointer" onclick="closeLightbox()">&times;</span>
         <div class="modal-content">
-            <div class="mySlides">
-                <div class="numbertext">1 / 4</div>
-                <img src="images/logoLQBlack.png" style="width:100%">
+            <div class="slide">
+                <img src="images/logoLQBlack.png" class="image-slide" alt="Black Logo">
             </div>
-      
-            <div class="mySlides">
-                <div class="numbertext">2 / 4</div>
-                <img src="images/logoLQBlue.png" style="width:100%">
+            <div class="slide">
+                <img src="images/logoLQBlue.png" class="image-slide" alt="Blue Logo">
+            </div>    
+            <div class="slide">
+                <img src="images/Park.jpg" class="image-slide" alt="Korean">
             </div>
-      
-            <div class="mySlides">
-                <div class="numbertext">3 / 4</div>
-                <img src="images/logoLQBlack.png" style="width:100%">
-            </div>
-          
-            <div class="mySlides">
-                <div class="numbertext">4 / 4</div>
-                <img src="images/logoLQBlue.png" style="width:100%">
-            </div>
-          
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         
-            <div class="caption-container">
-                <p id="caption"></p>
+            <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+              
+            <div class="dots">
+                <div class="col">
+                    <img src="images/logoLQBlack.png" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." />
+                </div>
+                <div class="col">
+                    <img src="images/logoLQBlue.png" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy car exploring offroad." />
+                </div>
+                <div class="col">
+                    <img src="images/Park.jpg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy car in the city" />
+                </div>
             </div>
-      
-      
-            <div class="column">
-                <img class="demo cursor" src="images/logoLQBlack.png" style="width:100%" onclick="currentSlide(1)" alt="Logos 1">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="images/logoLQBlue.png" style="width:100%" onclick="currentSlide(2)" alt="Logos 2">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="images/logoLQBlack.png" style="width:100%" onclick="currentSlide(3)" alt="Logos 3">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="images/logoLQBlue.png" style="width:100%" onclick="currentSlide(4)" alt="Logos 4">
-            </div>
-        </div>
+        </div> 
     </div>
 
     <!-- the footer part -->
@@ -129,41 +109,48 @@
     </script>
 
     <script>
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+        let slideIndex = 1;
+            showSlide(slideIndex);
         
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
+        function openLightbox() {
+            document.getElementById('Lightbox').style.display = 'block';
+        };
+        
+        function closeLightbox() {
+            document.getElementById('Lightbox').style.display = 'none';
+        };
+        
+        function changeSlide(n) {
+            showSlide(slideIndex += n);
+        };
+        
+        function toSlide(n) {
+            showSlide(slideIndex = n);
+        };
+        
+        function showSlide(n) {
+            const slides = document.getElementsByClassName('slide');
+            let modalPreviews = document.getElementsByClassName('modal-preview');
+            
+            if (n > slides.length) {
+                slideIndex = 1;	
+            };
+            
+            if (n < 1) {
+                slideIndex = slides.length;
+            };
+            
+            for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
-        }
+            };
+            
+            for (let i = 0; i < modalPreviews.length; i++) {
+                modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+            };
+            
+            slides[slideIndex - 1].style.display = 'block';
+            modalPreviews[slideIndex - 1].className += ' active';
+        };
     </script>
 
 </body>

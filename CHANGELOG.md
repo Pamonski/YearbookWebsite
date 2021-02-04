@@ -1,5 +1,14 @@
 # Changelog
 
+02/04/2021 [LIM]
+
+- Changes in gallery.html
+  - Added tentative Lightbox gallery
+- CSS folder
+  - Removed gallery.css
+- Changes in style.css
+  - Added css for gallery page
+
 02/03/2021 [PARK]
 - Changes in style.css
   - Modified footer to stay at bottom

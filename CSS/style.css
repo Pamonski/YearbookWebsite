@@ -132,3 +132,159 @@ footer{
 .about_button:hover{
   color: #ffb41f;
 }
+
+/* For Figures in Gallery */
+figure {
+  border: 1px #cccccc solid;
+  padding: 4px;
+  margin: auto;
+}
+
+/* Figure Caption */
+figcaption {
+  text-align: center;
+}
+
+/* Style of the Previews in Gallery */
+.preview {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row > .col {
+  padding: 0 8px;
+}
+
+/* Create four equal columns that floats next to eachother */
+.col {
+  float: left;
+  width: 25%;
+}
+
+/* Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 10px 62px 0px 62px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: silver;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 0 0 0 0;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* Hide the slides by default */
+.slide {
+  display: none;
+}
+
+.image-slide {
+  width: 100%;
+}
+
+.modal-preview {
+  width: 100%;
+}
+
+/* Bottom Images in Lightbox */
+.dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Misc. Image Properties in Gallery */
+img.preview, img.modal-preview {
+  opacity: 0.6;
+}
+
+/* Misc. Image Properties in Gallery */
+img.active,
+.preview:hover,
+.modal-preview:hover {
+  opacity: 1;
+}
+
+/* Misc. Image Properties in Gallery */
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+/* Misc. Image Properties in Gallery */
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 
+
+/* Close Preview Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Hover Effects on Close Preview Button */
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Previous and Next Buttons when browsing images */
+.previous,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Additional Next Button Properties */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Hover Effects of Previous and Next Buttons */
+.previous:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
