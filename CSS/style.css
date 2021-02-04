@@ -100,8 +100,8 @@ footer{
 }
 /* for the image in about page */
 .about_face{
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
+  height: auto;
   margin: auto;
   border-radius: 100px;
 }
