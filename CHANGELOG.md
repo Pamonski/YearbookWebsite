@@ -1,5 +1,20 @@
 # Changelog
 
+02/04/2021 [PAMONAG]
+
+// indexPamonag.html
+
+- OVERHAULED navigation part including classes.
+  // stylePamonag.css
+- OVERHAULED navigation part css classes.
+- REPLACED html,body with \*.
+  - Added padding and text-decoration.
+- ADDED new color: darkBlue.
+- REMOVED a, .flex-row, .ul in global classes.
+  // main.js
+- REMOVED old code.
+- ADDED sticky & active code.
+
 02/04/2021 [LIM]
 
 - Changes in gallery.html
@@ -10,6 +25,7 @@
   - Added css for gallery page
 
 02/03/2021 [PARK]
+
 - Changes in style.css
   - Modified footer to stay at bottom
   - Modified .home (deleted width:50% and border)
@@ -26,7 +42,6 @@
 - Created gallery.html
 - CSS folder
   - Added gallery.css
-
 
 02/02/2021 [PARK]
 

@@ -1,10 +1,10 @@
 @import url("fonts.css");
 
-html,
-body {
-  margin: 0%;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  text-decoration: none;
 }
 
 :root {
@@ -14,6 +14,7 @@ body {
   /* ----- */
 
   /* COLORS */
+  --DarkBlue: #05053b;
   --NavyBlue: #040562;
   --Blue: #0247a1;
   --LightBlue: #0077b8;
@@ -25,21 +26,6 @@ body {
 }
 
 /* <!----------------------------------- GLOBAL CLASSES -----------------------------------> */
-a {
-  text-decoration: none;
-  color: var(--White);
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-ul {
-  list-style-type: none;
-}
-
 /* TO BE DETERMINED */
 h1 {
   font-family: var(--OpenSansRegular);
@@ -48,85 +34,75 @@ h1 {
 /* ---------------- */
 /* <!--------------------------------------------------------------------------------------> */
 
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
 /* <!----------------------------------- NAVIGATION -----------------------------------> */
-.nav {
-  background: var(--NavyBlue);
-  padding: 0.2rem;
-  height: 0rem;
-  min-height: 10vh;
-  overflow: hidden;
-  transition: height 1s ease-in-out;
-}
-
-.nav .nav-menu {
-  justify-content: space-between;
-}
-
-/* MOBILE SIDE */
-.nav .toggle-collapse {
-  position: absolute;
-  top: 0%;
+.navbar {
+  position: fixed;
   width: 100%;
-  cursor: pointer;
-  display: none;
+  padding: 15px 0;
+  /* background: var(--NavyBlue); */
+  font-family: var(--OpenSansRegular), sans-serif;
+  transition: all 0.3s ease;
 }
 
-.nav .toggle-collapse .toggle-icons {
+.navbar.sticky {
+  padding: 0px 0;
+  background: var(--DarkBlue);
+}
+
+.navbar .max-width {
   display: flex;
-  justify-content: flex-end;
-  padding: 1.7rem 1rem;
+  align-items: center;
+  /* justify-content: space-between; */
 }
 
-.nav .toggle-collapse .toggle-icons i {
-  font-size: 1.4rem;
-  color: var(--NavyBlue);
+.navbar .logo a {
+  color: var(--White);
+  padding-right: 25px;
 }
 
-.collapse {
-  height: 30rem;
-}
-/* ----------- */
-
-.nav .nav-items {
-  display: flex;
-  margin: 0;
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
 }
 
-.nav .nav-items .nav-link {
-  padding: 1.6rem 1rem;
-  /* CHANGE TO H3 */
-  font-size: 1.1rem;
-  /* ------------ */
-  position: relative;
-  font-family: var(--OpenSansRegular);
+.navbar .menu li a {
+  color: var(--White);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
 }
 
-.nav .nav-items .nav-link:hover a {
+.navbar .menu li a:hover {
   color: var(--Orange);
 }
 
-.nav .nav-brand a {
-  font-size: 1.6rem;
-  padding: 1rem 1rem;
-  display: block;
-}
-
-.nav .social {
-  padding: 1.4rem 1rem;
-}
-
-.nav .social i {
-  padding: 0 0.2rem;
-}
-
-.nav .social i:hover {
+.navbar.sticky .menu li a:hover {
   color: var(--Orange);
 }
 /* <!----------------------------------------------------------------------------------> */
 
 /* <!----------------------------------- MAIN CONTENT -----------------------------------> */
 /* Site Title */
+.home {
+  display: flex;
+  background: black;
+  background-size: cover;
+  height: 100vh;
+  color: #ffffff;
+  min-height: 500px;
+  font-family: var(--OpenSansRegular), sans-serif;
+}
 
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
 /* ---------- */
 /* <!------------------------------------------------------------------------------------> */
 
