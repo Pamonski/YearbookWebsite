@@ -15,6 +15,11 @@
 - REMOVED old code.
 - ADDED sticky & active code.
 
+02/04/2021 [PARK]
+
+- Changes in style.css
+  - Changed picture in about.page to be responsive
+
 02/04/2021 [LIM]
 
 - Changes in gallery.html
