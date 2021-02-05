@@ -1,5 +1,12 @@
 # Changelog
 
+02/05/2021 [LIM]
+
+- Changes in gallery.html
+  - OVERHAULED display of images
+- Changes in style.css
+  - Separated css for modal gallery and planned carousel
+
 02/04/2021 [PAMONAG]
 
 // indexPamonag.html

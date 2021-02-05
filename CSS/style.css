@@ -135,14 +135,21 @@ footer{
 
 /* For Figures in Gallery */
 figure {
-  border: 1px #cccccc solid;
-  padding: 4px;
+  background-color: rgb(191, 230, 245);
+  padding: 5px;
   margin: auto;
+  height: 100%;
+  width: 100%;
 }
 
 /* Figure Caption */
-figcaption {
+.rowG figcaption {
   text-align: center;
+}
+
+.colGC figcaption {
+  text-align: left;
+  font-size: small;
 }
 
 /* Style of the Previews in Gallery */
@@ -151,26 +158,63 @@ figcaption {
   max-height: 100%;
 }
 
-.rowG {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+/* Creates grid for modal gallery images*/
+.item1 { 
+  grid-area: imgM;
+  text-align: center;
 }
 
-.rowG:after {
+.item2 { 
+  grid-area: imgS; 
+  text-align: center;
+}
+.item3 { 
+  grid-area: imgS2; 
+  text-align: center;
+}
+.item4 { 
+  grid-area: imgS3; 
+  text-align: center;
+}
+
+.rowG {
+  display: grid;
+  position: relative;
+  grid-template-rows: 150px 150px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'imgM imgM imgS imgS'
+    'imgM imgM imgS2 imgS3';
+  flex-direction: row;
+  justify-content: center;
+  grid-gap: 20px;
+}
+
+.rowG > div {
+  align-content: center;
+}
+
+/* Create four equal columns that floats next to eachother (for carousel)*/
+.colGC {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+.rowGC {
+  display: inline-block;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.rowGC:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.rowG > .colG {
+.rowGC > .colGC {
   padding: 0 8px;
-}
-
-/* Create four equal columns that floats next to eachother */
-.colG {
-  float: left;
-  width: 25%;
 }
 
 /* Modal (background) */
@@ -219,22 +263,22 @@ figcaption {
   justify-content: space-between;
 }
 
-/* Misc. Image Properties in Gallery */
+/* Misc. Image Properties in Gallery 
 img.preview, img.modal-preview {
   opacity: 0.6;
 }
 
-/* Misc. Image Properties in Gallery */
+Misc. Image Properties in Gallery 
 img.active,
 .preview:hover,
 .modal-preview:hover {
   opacity: 1;
 }
 
-/* Misc. Image Properties in Gallery */
+ Misc. Image Properties in Gallery 
 img.hover-shadow {
   transition: 0.3s;
-}
+}*/
 
 /* Misc. Image Properties in Gallery */
 .hover-shadow:hover {
