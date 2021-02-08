@@ -1,5 +1,10 @@
 # Changelog
 
+02/08/2021 [LIM]
+
+- Created contact.html
+- Connected each html
+
 02/05/2021 [LIM]
 
 - Changes in gallery.html
