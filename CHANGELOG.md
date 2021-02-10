@@ -1,6 +1,13 @@
 # Changelog
 
-02/08/2021 [LIM]
+02/10/2021 [PARK]
+
+- Changes in about.html
+  - Changed faces
+- Changes in images
+  - Added Pamonag.jpg and James.jpg
+
+02/08/2021 [PARK]
 
 - Created contact.html
 - Connected each html
