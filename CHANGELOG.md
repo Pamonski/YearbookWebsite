@@ -6,6 +6,7 @@
 - index.html
   - OVERHAULED
   - ADDED Carousel
+  - ADDED firstSection
 - CSS FOLDER
   - ADDED owl.carousel.min.css
   - ADDED owl.theme.default.min.css
@@ -20,6 +21,8 @@
   - ADDED owl.carousel.min.js
 - main.js
   - ADDED carousel code
+- fonts.css
+  - ADDED "OpenSansSemibold"
 
 02/11/2021 [LIM]
 

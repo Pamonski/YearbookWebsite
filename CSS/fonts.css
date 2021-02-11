@@ -6,6 +6,17 @@
   src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
 }
 
+/* SEMI-BOLD */
+@font-face {
+  font-family: OpenSansSemibold;
+  src: url("../fonts/Open_Sans/OpenSans-SemiBold.ttf");
+}
+
+/* BOLD */
+@font-face {
+  font-family: OpenSansBold;
+  src: url("../fonts/Open_Sans/OpenSans-Bold.ttf");
+}
 /*------------------------ --------- ------------------------ */
 
 /*------------------------ ROBOTO ------------------------ */
