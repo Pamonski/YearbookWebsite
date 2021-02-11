@@ -1,5 +1,13 @@
 # Changelog
 
+02/11/2021 [LIM]
+
+- Changes in gallery.html
+  - Added filter for carousel gallery
+  - Added initial responsive image gallery
+- Changes in style.css
+  - Added css for bottom images
+
 02/11/2021 [PARK]
 
 - Changes in contact.html
