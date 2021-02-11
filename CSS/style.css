@@ -50,6 +50,10 @@ span {
 .container {
   margin: 0 5vw;
 }
+
+a {
+  text-decoration: none;
+}
 /* <!--------------------------------------------------------------------------------------> */
 
 .max-width {
@@ -59,7 +63,7 @@ span {
 }
 
 /* <!----------------------------------- NAVIGATION -----------------------------------> */
-.navbar {
+.navBar {
   position: fixed;
   width: 100%;
   padding: 15px 0;
@@ -68,28 +72,28 @@ span {
   transition: all 0.3s ease;
 }
 
-.navbar.sticky {
+.navBar.sticky {
   padding: 0px 0;
   background: var(--DarkBlue);
 }
 
-.navbar .max-width {
+.navBar .max-width {
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
 }
 
-.navbar .logo a {
+.navBar .logo a {
   color: var(--White);
   padding-right: 25px;
 }
 
-.navbar .menu li {
+.navBar .menu li {
   list-style: none;
   display: inline-block;
 }
 
-.navbar .menu li a {
+.navBar .menu li a {
   color: var(--White);
   font-size: 18px;
   font-weight: 500;
@@ -97,11 +101,11 @@ span {
   transition: color 0.3s ease;
 }
 
-.navbar .menu li a:hover {
+.navBar .menu li a:hover {
   color: var(--Orange);
 }
 
-.navbar.sticky .menu li a:hover {
+.navBar.sticky .menu li a:hover {
   color: var(--Orange);
 }
 /* <!----------------------------------------------------------------------------------> */

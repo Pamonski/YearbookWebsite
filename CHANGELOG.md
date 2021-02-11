@@ -2,6 +2,7 @@
 
 02/12/2021 [PAMONAG]
 
+- CHANGED NAVIGATION OF ALL PAGES
 - index.html
   - OVERHAULED
   - ADDED Carousel
@@ -11,6 +12,7 @@
 - style.css
   - IMPORTED fonts.css
   - ADDED :root
+  - ADDED global classes
   - ADDED navigation-css
   - COMMENTED old navigation-css
   - ADDED carousel-css

@@ -1,9 +1,9 @@
 $(document).ready(function(){
     $(window).scroll(function(){
         if(this.scrollY >20){
-            $('.navbar').addClass("sticky");
+            $('.navBar').addClass("sticky");
         }else{
-            $('.navbar').removeClass("sticky");
+            $('.navBar').removeClass("sticky");
         }
     });
     
