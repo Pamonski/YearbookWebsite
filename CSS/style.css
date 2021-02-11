@@ -66,8 +66,9 @@ a {
 .navBar {
   position: fixed;
   width: 100%;
-  padding: 15px 0;
-  /* background: var(--NavyBlue); */
+  padding: 10px 0;
+  background: var(--NavyBlue);
+  z-index: 999;
   font-family: var(--OpenSansRegular), sans-serif;
   transition: all 0.3s ease;
 }

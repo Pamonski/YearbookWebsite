@@ -5,9 +5,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -28,17 +25,22 @@
 </head>
 
 <body>
-    <!-- header, still need to include logo -->
     <header>
-        <!-- id=navbar for the sticky function -->
-        <nav id="navbar">
-            <label class="logo"><a href="index.html"><img src="images/50x50/logoWhite.png" alt="YearbookWebsite"></a></label>
-            <ul>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="gallery.html">GALLERY</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
+        <!----------------------------------- Navigation ----------------------------------->
+        <nav class="navBar">
+            <div class="max-width">
+                <div class="logo"><a href="index.html"><img src="images/50x50/logoWhite.png" alt=""></a></div>
+                <ul class="menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!-- <div class="menu-btn">
+                            <i class="fas fa-bars"></i>
+                        </div> -->
+            </div>
         </nav>
+        <!---------------------------------------------------------------------------------->
     </header>
 
     <div class="rowG">
@@ -315,6 +317,14 @@
         }
         }
     </script>
+
+    <!-- JQuery Library -->
+    <script src="js/jquery3.5.1.min.js"></script>
+    <!-- -------------- -->
+    
+    <!-- Custom Javascript -->
+    <script src="js/main.js"></script>
+    <!----------------------->
 
 </body>
 
