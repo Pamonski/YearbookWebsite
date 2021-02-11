@@ -1,5 +1,12 @@
 # Changelog
 
+02/11/2021 [PARK]
+
+- Changes in contact.html
+  - Changed the structure according to the wireframe
+- Changes in style.css
+  - Added css for contact.html
+
 02/10/2021 [PARK]
 
 - Changes in about.html

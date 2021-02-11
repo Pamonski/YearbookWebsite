@@ -332,3 +332,64 @@ img.hover-shadow {
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* content of contact page */
+.contact_form{
+  text-align: center;
+  margin: 50px auto 50px auto;
+  width: 50%;
+}
+
+/* h1 in Contact page */
+.contact_form > h1{
+  color: #040562;
+  font-size: 46px;
+}
+
+/* h3 in Contact page */
+.contact_form > h3{
+  color: #05053b;
+  margin: 10px auto 20px auto;
+}
+
+/* p in Contact page */
+.contact_form > p{
+  color: #0247a1;
+  font-size: 18px;
+}
+
+/* input forms in Contact page */
+.contact_input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* inputs in Contact page */
+.contact_input > input {
+  width: 100%;
+  margin-bottom:  10px;
+  padding: 10px;
+  color: #040562;
+}
+
+/* message in Contact page */
+.contact_input > textarea {
+  width: 100%;
+  margin-bottom:  10px;
+  padding: 10px;
+  color: #040562;
+  resize: none;
+}
+
+/* button in Contact page */
+.contact_form > button {
+  color: white;
+  background-color: #ffb41f;
+  display: block;
+  width: 30%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #ffb41f;
+}
