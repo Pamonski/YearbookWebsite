@@ -341,9 +341,8 @@ figure {
 }
 
 /* Creates grid for modal gallery images*/
-.item1 {
 /* Modal gallery image properties*/
-.item1 { 
+.item1 {
   grid-area: imgM;
   text-align: center;
   width: 100%;
@@ -411,7 +410,7 @@ figure {
   display: flex;
   justify-content: center;
   background-color: white;
-} 
+}
 
 .rowGC .botCarousel .items {
   display: flex;
@@ -432,15 +431,15 @@ figure {
 }
 
 .items span.active,
-.items span:hover{
+.items span:hover {
   color: #fff;
   background: lightgreen;
 }
 
-.rowGC .colGC.hide{
+.rowGC .colGC.hide {
   display: none;
 }
-.rowGC .colGC.show{
+.rowGC .colGC.show {
   animation: animate 0.4s ease;
 }
 
@@ -544,7 +543,7 @@ figure {
 }
 
 /* Carousel Image View */
-.preview-box{
+.preview-box {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -557,82 +556,82 @@ figure {
   pointer-events: none;
   border-radius: 3px;
   padding: 0 5px 5px 5px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
-.preview-box.show{
+.preview-box.show {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(1);
   transition: all 0.3s ease;
 }
-.preview-box .details{
+.preview-box .details {
   padding: 13px 15px 13px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.details .title{
+.details .title {
   display: flex;
   font-size: 18px;
   font-weight: 400;
 }
-.details .title p{
+.details .title p {
   font-weight: 500;
   margin-left: 5px;
 }
-.details .icon{
+.details .icon {
   color: #007bff;
   font-style: 22px;
   cursor: pointer;
 }
-.preview-box .image-box{
+.preview-box .image-box {
   width: 100%;
   display: flex;
 }
-.image-box img{
+.image-box img {
   width: 100%;
   border-radius: 0 0 3px 3px;
 }
 
 @keyframes animate {
-  0%{
+  0% {
     transform: scale(0.5);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }
 
 @media (max-width: 1000px) {
-  .colGC{
+  .colGC {
     width: calc(100% / 3);
   }
 }
 @media (max-width: 800px) {
-  .colGC{
+  .colGC {
     width: 50%;
   }
 }
 @media (max-width: 700px) {
-  .rowGC .botCarousel .items{
+  .rowGC .botCarousel .items {
     max-width: 600px;
   }
-  .rowGC .botCarousel .items span{
+  .rowGC .botCarousel .items span {
     padding: 7px 15px;
   }
 }
 @media (max-width: 600px) {
-  .rowGC{
+  .rowGC {
     margin: 30px auto;
   }
-  .rowGC .botCarousel .items{
+  .rowGC .botCarousel .items {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .botCarousel .items span{
+  .botCarousel .items span {
     margin: 5px;
   }
-  .colGC{
+  .colGC {
     width: 100%;
   }
 }
