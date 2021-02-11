@@ -1,3 +1,5 @@
+@import url("fonts.css");
+
 * {
   padding: 0;
   margin: 0;
@@ -6,16 +8,196 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* FONTS */
+  --OpenSansRegular: "OpenSansRegular", cursive;
+  --RobotoRegular: "RobotoRegular", cursive;
+  /* ----- */
+
+  /* COLORS */
+  --DarkBlue: #05053b;
+  --NavyBlue: #040562;
+  --Blue: #0247a1;
+  --LightBlue: #0077b8;
+  --LightYellow: #fece48;
+  --Orange: #ffb41f;
+  --White: #ffffff;
+  --Black: #000000;
+  /* ------ */
+}
+
+/* <!----------------------------------- GLOBAL CLASSES -----------------------------------> */
+/* TO BE DETERMINED */
+h1 {
+  font-family: var(--OpenSansRegular);
+  font-size: 40px;
+}
+/* ---------------- */
+
+button.btn {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-family: var(--OpenSansRegular);
+  cursor: pointer;
+}
+
+span {
+  font-family: var(--OpenSansRegular);
+}
+
+.container {
+  margin: 0 5vw;
+}
+/* <!--------------------------------------------------------------------------------------> */
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/* <!----------------------------------- NAVIGATION -----------------------------------> */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 15px 0;
+  /* background: var(--NavyBlue); */
+  font-family: var(--OpenSansRegular), sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  padding: 0px 0;
+  background: var(--DarkBlue);
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.navbar .logo a {
+  color: var(--White);
+  padding-right: 25px;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  color: var(--White);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: var(--Orange);
+}
+
+.navbar.sticky .menu li a:hover {
+  color: var(--Orange);
+}
+/* <!----------------------------------------------------------------------------------> */
+
+/* <!----------------------------------- INDEX.HTML -------------------------------------> */
+/* <!----------------------------------- MAIN CONTENT -----------------------------------> */
+/* Site Title */
+.home {
+  display: flex;
+  background: black;
+  background-size: cover;
+  height: 100vh;
+  color: #ffffff;
+  min-height: 500px;
+  font-family: var(--OpenSansRegular), sans-serif;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+/* ---------- */
+
+/* Carousel */
+main .blog {
+  background: var(--Blue);
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+  width: 100%;
+  background-size: 65%;
+}
+
+main .blog .blog-post {
+  padding-top: 6rem;
+}
+
+main .blog-post .blog-content {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 3rem 2rem;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+main .blog-content .blog-title {
+  padding: 2rem 0;
+}
+
+main .blog-content .btn-blog {
+  padding: 0.7rem 2rem;
+  background: var(--Orange);
+  margin: 0.5rem;
+}
+
+main .blog-content span {
+  display: block;
+}
+
+section .container .owl-nav {
+  position: absolute;
+  top: 10%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next {
+  color: var(--Orange);
+  background: transparent;
+  font-size: 2rem;
+}
+
+.owl-theme .owl-nav [class*="owl-"] {
+  outline: none;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: transparent;
+  color: var(--Orange);
+}
+/* ------------- */
+/* <!------------------------------------------------------------------------------------> */
+
+/* <!------------------------------------------------------------------------------------> */
+
 /* For the font */
 body {
   font-family: "Open Sans", sans-serif;
 }
 
 /* header design (Overflow==auto to include buttons) */
-nav {
+/* nav {
   background-color: #040562;
   height: 70px;
-  /* padding: 10px; */
   overflow: hidden;
 }
 
@@ -40,7 +222,7 @@ nav ul li a {
   font-size: 18px;
   text-transform: uppercase;
   text-decoration: none;
-}
+} */
 
 /* for the hero, temporary included border to clarify its size */
 .home {
@@ -55,7 +237,7 @@ nav ul li a {
 }
 
 /* the login button in hero */
-.loginBtn{
+.loginBtn {
   width: 40%;
   padding: 5px;
   border: none;
@@ -74,7 +256,7 @@ nav ul li a {
 }
 
 /* for footer */
-footer{
+footer {
   background-color: skyblue;
   position: relative;
   bottom: 0;
@@ -94,12 +276,12 @@ footer{
 }
 
 /* slogan in about page */
-.about_slogan{
+.about_slogan {
   text-align: center;
   padding: 20px;
 }
 /* for the image in about page */
-.about_face{
+.about_face {
   max-width: 200px;
   height: auto;
   margin: auto;
@@ -107,7 +289,7 @@ footer{
 }
 
 /* for the info below image in about page */
-.about_info{
+.about_info {
   text-align: center;
   background-color: #040562;
   color: white;
@@ -116,12 +298,12 @@ footer{
 }
 
 /* for names in about page */
-.about_name{
+.about_name {
   padding: 20px;
 }
 
 /* for read more in about page */
-.about_button{
+.about_button {
   color: white;
   float: right;
   margin: 0px 0px 20px 0px;
@@ -129,7 +311,7 @@ footer{
 }
 
 /* Change color of read more in about page when hovered */
-.about_button:hover{
+.about_button:hover {
   color: #ffb41f;
 }
 
@@ -159,21 +341,21 @@ figure {
 }
 
 /* Creates grid for modal gallery images*/
-.item1 { 
+.item1 {
   grid-area: imgM;
   text-align: center;
 }
 
-.item2 { 
-  grid-area: imgS; 
+.item2 {
+  grid-area: imgS;
   text-align: center;
 }
-.item3 { 
-  grid-area: imgS2; 
+.item3 {
+  grid-area: imgS2;
   text-align: center;
 }
-.item4 { 
-  grid-area: imgS3; 
+.item4 {
+  grid-area: imgS3;
   text-align: center;
 }
 
@@ -183,8 +365,8 @@ figure {
   grid-template-rows: 150px 150px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
-    'imgM imgM imgS imgS'
-    'imgM imgM imgS2 imgS3';
+    "imgM imgM imgS imgS"
+    "imgM imgM imgS2 imgS3";
   flex-direction: row;
   justify-content: center;
   grid-gap: 20px;
@@ -283,7 +465,7 @@ img.hover-shadow {
 /* Misc. Image Properties in Gallery */
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} 
+}
 
 /* Close Preview Button */
 .close {
@@ -334,32 +516,32 @@ img.hover-shadow {
 }
 
 /* content of contact page */
-.contact_form{
+.contact_form {
   text-align: center;
   margin: 50px auto 50px auto;
   width: 50%;
 }
 
 /* h1 in Contact page */
-.contact_form > h1{
+.contact_form > h1 {
   color: #040562;
   font-size: 46px;
 }
 
 /* h3 in Contact page */
-.contact_form > h3{
+.contact_form > h3 {
   color: #05053b;
   margin: 10px auto 20px auto;
 }
 
 /* p in Contact page */
-.contact_form > p{
+.contact_form > p {
   color: #0247a1;
   font-size: 18px;
 }
 
 /* input forms in Contact page */
-.contact_input{
+.contact_input {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -368,7 +550,7 @@ img.hover-shadow {
 /* inputs in Contact page */
 .contact_input > input {
   width: 100%;
-  margin-bottom:  10px;
+  margin-bottom: 10px;
   padding: 10px;
   color: #040562;
 }
@@ -376,7 +558,7 @@ img.hover-shadow {
 /* message in Contact page */
 .contact_input > textarea {
   width: 100%;
-  margin-bottom:  10px;
+  margin-bottom: 10px;
   padding: 10px;
   color: #040562;
   resize: none;

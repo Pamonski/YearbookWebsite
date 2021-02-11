@@ -1,5 +1,24 @@
 # Changelog
 
+02/11/2021 [PAMONAG]
+
+- index.html
+  - OVERHAULED
+  - ADDED Carousel
+- CSS FOLDER
+  - ADDED owl.carousel.min.css
+  - ADDED owl.theme.default.min.css
+- style.css
+  - IMPORTED fonts.css
+  - ADDED :root
+  - ADDED navigation-css
+  - COMMENTED old navigation-css
+  - ADDED carousel-css
+- JS FOLDER
+  - ADDED owl.carousel.min.js
+- main.js
+  - ADDED carousel code
+
 02/11/2021 [PARK]
 
 - Changes in contact.html
