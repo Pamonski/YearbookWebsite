@@ -126,6 +126,28 @@ a {
 .navBar.sticky .menu li a:hover {
   color: var(--Orange);
 }
+
+.navBar .navLogin a {
+  /* display: inline-block; */
+  /* float: right; */
+  background: var(--Orange);
+  color: #ffffff;
+  font-family: var(--OpenSansRegular);
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 5px 25px;
+  margin-top: 50px;
+  margin-left: 800px;
+  border-radius: 6px;
+  border: 2px solid var(--Orange);
+  transition: all 0.3s ease;
+}
+
+.navBar .navLogin a:hover {
+  color: var(--White);
+  border: 2px solid #f0a000;
+  background: #f0a000;
+}
 /* <!----------------------------------------------------------------------------------> */
 
 /* <!----------------------------------- INDEX.HTML -------------------------------------> */

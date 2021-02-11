@@ -3,6 +3,8 @@
 02/12/2021 [PAMONAG]
 
 - CHANGED NAVIGATION OF ALL PAGES
+- NAVIGATION
+  - ADDED Login button
 - index.html
   - OVERHAULED
   - ADDED Carousel
