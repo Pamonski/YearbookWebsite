@@ -59,9 +59,17 @@
             <figcaption>Title</figcaption>
         </figure></div>
     </div>
-    <br>
     <div class="rowGC">
-        <div class="colGC"><figure>
+        <nav class="botCarousel">
+            <div class="items">
+              <span class="item active" data-name="all">All</span>
+              <span class="item" data-name="party">Party</span>
+              <span class="item" data-name="school">School</span>
+              <span class="item" data-name="award">Award</span>
+              <span class="item" data-name="council">Council</span>
+            </div>
+        </nav>
+        <div class="colGC" data-name="school"><figure>
             <img src="images/(836).JPG" class="hover-shadow preview">
             <figcaption>
                 <a href="#" class="fas fa-heart" style="color: rgb(55, 139, 195);"> 69420</a>
@@ -71,7 +79,7 @@
                 <a href="#" style="float: right; color: rgb(55, 139, 195);"><b>SHARE</b></a>
             </figcaption>
         </figure>Image 1</div>
-        <div class="colGC"><figure>
+        <div class="colGC" data-name="party"><figure>
            <img src="images/6.jpg" class="hover-shadow preview">
            <figcaption>
                 <a href="#" class="fas fa-heart" style="color: rgb(55, 139, 195);"> 69420</a>
@@ -81,7 +89,7 @@
                 <a href="#" style="float: right; color: rgb(55, 139, 195);"><b>SHARE</b></a>
            </figcaption>
         </figure>Image 2</div>
-        <div class="colGC"><figure>
+        <div class="colGC" data-name="school"><figure>
            <img src="images/IMG_8018.JPG" class="hover-shadow preview">
            <figcaption>
                 <a href="#" class="fas fa-heart" style="color: rgb(55, 139, 195);"> 69420</a>
@@ -91,7 +99,7 @@
                 <a href="#" style="float: right; color: rgb(55, 139, 195);"><b>SHARE</b></a>
            </figcaption>
         </figure>Image 3</div>
-        <div class="colGC"><figure>
+        <div class="colGC" data-name="award"><figure>
             <img src="images/received_386130348990911.jpeg" class="hover-shadow preview">
             <figcaption>
                 <a href="#" class="fas fa-heart" style="color: rgb(55, 139, 195);"> 69420</a>
@@ -101,10 +109,7 @@
                 <a href="#" style="float: right; color: rgb(55, 139, 195);"><b>SHARE</b></a>
             </figcaption>
          </figure>Image 4</div>
-    </div>
-    <br><br>
-    <div class="rowGC">
-        <div class="colGC"><figure>
+        <div class="colGC" data-name="council"><figure>
             <img src="images/IMG_7903.JPG" class="hover-shadow preview">
             <figcaption>
                 <a href="#" class="fas fa-heart" style="color: rgb(55, 139, 195);"> 69420</a>
@@ -114,7 +119,7 @@
                 <a href="#" style="float: right; color: rgb(55, 139, 195);"><b>SHARE</b></a>
             </figcaption>
         </figure>Image 5</div>
-        <div class="colGC"><figure>
+        <div class="colGC" data-name="party"><figure>
            <img src="images/P_20170930_201421.jpg" class="hover-shadow preview">
            <figcaption>
                 <a href="#" class="fas fa-heart" style="color: rgb(55, 139, 195);"> 69420</a>
@@ -124,7 +129,7 @@
                 <a href="#" style="float: right; color: rgb(55, 139, 195);"><b>SHARE</b></a>
            </figcaption>
         </figure>Image 6</div>
-        <div class="colGC"><figure>
+        <div class="colGC" data-name="party"><figure>
            <img src="images/P_20170930_214039.jpg" class="hover-shadow preview">
            <figcaption>
                 <a href="#" class="fas fa-heart" style="color: rgb(55, 139, 195);"> 69420</a>
@@ -134,7 +139,7 @@
                 <a href="#" style="float: right; color: rgb(55, 139, 195);"><b>SHARE</b></a>
            </figcaption>
         </figure>Image 7</div>
-        <div class="colGC"><figure>
+        <div class="colGC" data-name="school"><figure>
             <img src="images/DSC02305.JPG" class="hover-shadow preview">
             <figcaption>
                 <a href="#" class="fas fa-heart" style="color: rgb(55, 139, 195);"> 69420</a>
@@ -180,6 +185,14 @@
             </div>
         </div> 
     </div>
+    <div class="preview-box">
+        <div class="details">
+          <span class="title">Image Category: <p></p></span>
+          <span class="icon fas fa-times"></span>
+        </div>
+        <div class="image-box"><img src="" alt=""></div>
+      </div>
+      <div class="shadow"></div>
     <br>
     <!-- the footer part -->
     <footer>
@@ -206,7 +219,7 @@
 
     <script>
         let slideIndex = 1;
-            showSlide(slideIndex);
+        showSlide(slideIndex);
         
         function openLightbox() {
             document.getElementById('Lightbox').style.display = 'block';
@@ -247,6 +260,60 @@
             slides[slideIndex - 1].style.display = 'block';
             modalPreviews[slideIndex - 1].className += ' active';
         };
+    </script>
+
+    <script>
+        const filterItem = document.querySelector(".items");
+        const filterImg = document.querySelectorAll(".rowGC .colGC");
+
+        window.onload = ()=>{ //after window loaded
+        filterItem.onclick = (selectedItem)=>{ //if user click on filterItem div
+            if(selectedItem.target.classList.contains("item")){ //if user selected item has .item class
+            filterItem.querySelector(".active").classList.remove("active"); //remove the active class which is in first item
+            selectedItem.target.classList.add("active"); //add that active class on user selected item
+            let filterName = selectedItem.target.getAttribute("data-name"); //getting data-name value of user selected item and store in a filtername variable
+            filterImg.forEach((colGC) => {
+                let filterImges = colGC.getAttribute("data-name"); //getting image data-name value
+                //if user selected item data-name value is equal to images data-name value
+                //or user selected item data-name value is equal to "all"
+                if((filterImges == filterName) || (filterName == "all")){
+                    colGC.classList.remove("hide"); //first remove the hide class from the image
+                    colGC.classList.add("show"); //add show class in image
+                }else{
+                    colGC.classList.add("hide"); //add hide class in image
+                    colGC.classList.remove("show"); //remove show class from the image
+                }
+            });
+            }
+        }
+        for (let i = 0; i < filterImg.length; i++) {
+            filterImg[i].setAttribute("onclick", "preview(this)"); //adding onclick attribute in all available images
+        }
+        }
+
+        //fullscreen image preview function
+        //selecting all required elements
+        const previewBox = document.querySelector(".preview-box"),
+        categoryName = previewBox.querySelector(".title p"),
+        previewImg = previewBox.querySelector("img"),
+        closeIcon = previewBox.querySelector(".icon"),
+        shadow = document.querySelector(".shadow");
+
+        function preview(element){
+        //once user click on any image then remove the scroll bar of the body, so user can't scroll up or down
+        document.querySelector("body").style.overflow = "hidden";
+        let selectedPrevImg = element.querySelector("img").src; //getting user clicked image source link and stored in a variable
+        let selectedImgCategory = element.getAttribute("data-name"); //getting user clicked image data-name value
+        previewImg.src = selectedPrevImg; //passing the user clicked image source in preview image source
+        categoryName.textContent = selectedImgCategory; //passing user clicked data-name value in category name
+        previewBox.classList.add("show"); //show the preview image box
+        shadow.classList.add("show"); //show the light grey background
+        closeIcon.onclick = ()=>{ //if user click on close icon of preview box
+            previewBox.classList.remove("show"); //hide the preview box
+            shadow.classList.remove("show"); //hide the light grey background
+            document.querySelector("body").style.overflow = "auto"; //show the scroll bar on body
+        }
+        }
     </script>
 
 </body>

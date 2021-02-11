@@ -1,6 +1,6 @@
 # Changelog
 
-02/11/2021 [PAMONAG]
+02/12/2021 [PAMONAG]
 
 - index.html
   - OVERHAULED
@@ -18,6 +18,14 @@
   - ADDED owl.carousel.min.js
 - main.js
   - ADDED carousel code
+
+02/11/2021 [LIM]
+
+- Changes in gallery.html
+  - Added filter for carousel gallery
+  - Added initial responsive image gallery
+- Changes in style.css
+  - Added css for bottom images
 
 02/11/2021 [PARK]
 
