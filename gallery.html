@@ -42,7 +42,7 @@
         </nav>
         <!---------------------------------------------------------------------------------->
     </header>
-
+    <!----------------------------------- Primary Images ----------------------------------->
     <div class="rowG">
         <div class="item1"><figure>
             <img src="images/logoLQBlack.png" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="Black Logo">
@@ -62,6 +62,7 @@
         </figure></div>
     </div>
     <div class="rowGC">
+        <!----------------------------------- Filter Options ----------------------------------->
         <nav class="botCarousel">
             <div class="items">
               <span class="item active" data-name="all">All</span>
@@ -71,6 +72,7 @@
               <span class="item" data-name="council">Council</span>
             </div>
         </nav>
+        <!----------------------------------- Secondary Images ----------------------------------->
         <div class="colGC" data-name="school"><figure>
             <img src="images/(836).JPG" class="hover-shadow preview">
             <figcaption>
@@ -153,6 +155,7 @@
          </figure>Image 8</div>
     </div>
     <br><br>
+    <!----------------------------------- Lightbox for Primary Images ----------------------------------->
     <div id="Lightbox" class="modal">
         <span class="close pointer" onclick="closeLightbox()">&times;</span>
         <div class="modal-content">
@@ -187,6 +190,7 @@
             </div>
         </div> 
     </div>
+    <!----------------------------------- Preview Secondary Images ----------------------------------->
     <div class="preview-box">
         <div class="details">
           <span class="title">Image Category: <p></p></span>
@@ -196,11 +200,12 @@
       </div>
       <div class="shadow"></div>
     <br>
-    <!-- the footer part -->
+    <!----------------------------------- Footer ----------------------------------->
     <footer>
         <h3 style="text-align: center;">footer</h3>
     </footer>
 
+    <!----------------------------------- Sticky navbar ----------------------------------->
     <script>
         window.onscroll = function() {myFunction()};
         // Get the navbar
@@ -219,6 +224,7 @@
         }
     </script>
 
+    <!----------------------------------- Lightbox Script ----------------------------------->
     <script>
         let slideIndex = 1;
         showSlide(slideIndex);
@@ -264,33 +270,34 @@
         };
     </script>
 
+    <!----------------------------------- Secondary Images Script ----------------------------------->
     <script>
         const filterItem = document.querySelector(".items");
         const filterImg = document.querySelectorAll(".rowGC .colGC");
 
         window.onload = ()=>{ //after window loaded
-        filterItem.onclick = (selectedItem)=>{ //if user click on filterItem div
-            if(selectedItem.target.classList.contains("item")){ //if user selected item has .item class
-            filterItem.querySelector(".active").classList.remove("active"); //remove the active class which is in first item
-            selectedItem.target.classList.add("active"); //add that active class on user selected item
-            let filterName = selectedItem.target.getAttribute("data-name"); //getting data-name value of user selected item and store in a filtername variable
-            filterImg.forEach((colGC) => {
-                let filterImges = colGC.getAttribute("data-name"); //getting image data-name value
-                //if user selected item data-name value is equal to images data-name value
-                //or user selected item data-name value is equal to "all"
-                if((filterImges == filterName) || (filterName == "all")){
-                    colGC.classList.remove("hide"); //first remove the hide class from the image
-                    colGC.classList.add("show"); //add show class in image
-                }else{
-                    colGC.classList.add("hide"); //add hide class in image
-                    colGC.classList.remove("show"); //remove show class from the image
+            filterItem.onclick = (selectedItem)=>{ //if user click on filterItem div
+                if(selectedItem.target.classList.contains("item")){ //if user selected item has .item class
+                    filterItem.querySelector(".active").classList.remove("active"); //remove the active class which is in first item
+                    selectedItem.target.classList.add("active"); //add that active class on user selected item
+                    let filterName = selectedItem.target.getAttribute("data-name"); //getting data-name value of user selected item and store in a filtername variable
+                    filterImg.forEach((colGC) => {
+                        let filterImges = colGC.getAttribute("data-name"); //getting image data-name value
+                        //if user selected item data-name value is equal to images data-name value
+                        //or user selected item data-name value is equal to "all"
+                        if((filterImges == filterName) || (filterName == "all")){
+                            colGC.classList.remove("hide"); //first remove the hide class from the image
+                            colGC.classList.add("show"); //add show class in image
+                        }else{
+                            colGC.classList.add("hide"); //add hide class in image
+                            colGC.classList.remove("show"); //remove show class from the image
+                        }
+                    });
                 }
-            });
             }
-        }
-        for (let i = 0; i < filterImg.length; i++) {
-            filterImg[i].setAttribute("onclick", "preview(this)"); //adding onclick attribute in all available images
-        }
+            for (let i = 0; i < filterImg.length; i++) {
+                filterImg[i].setAttribute("onclick", "preview(this)"); //adding onclick attribute in all available images
+            }
         }
 
         //fullscreen image preview function

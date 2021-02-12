@@ -748,7 +748,7 @@ figure {
   }
 }
 
-@media (max-width: 1000px) {
+/*@media (max-width: 1000px) {
   .colGC {
     width: calc(100% / 3);
   }
@@ -780,7 +780,7 @@ figure {
   .colGC {
     width: 100%;
   }
-}
+}*/
 
 /* content of contact page */
 .contact_form {
