@@ -1,5 +1,9 @@
 # Changelog
 
+02/16/2021 [PARK]
+
+- Created login.html and register.html
+
 02/12/2021 [PAMONAG]
 
 - CHANGED NAVIGATION OF ALL PAGES
