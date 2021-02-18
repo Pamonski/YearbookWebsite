@@ -1,5 +1,14 @@
 # Changelog
 
+02/19/2021 [PAMONAG]
+
+- IMAGES FOLDER
+  - ADDED subfolder "galleryImages"
+- main.js
+  - ADDED code for gallery.
+
+Overall, just slowly pushing final front-end codes.
+
 02/16/2021 [PARK]
 
 - Created login.html and register.html
