@@ -3,15 +3,21 @@
 02/19/2021 [PAMONAG]
 
 - OVERHAULED gallery.html.
+- OVERHAULED about.html
 - ADDED oldGallery.html for the old gallery structure.
+- ADDED oldAbout.html for the old about structure.
 - IMAGES FOLDER
   - ADDED subfolder "galleryImages"
+  - ADDED subfolder "aboutImages"
+    -ADDED picture 'Kristal.jpg'
 - main.js
   - ADDED code for gallery.
+  - ADDED carousel code for about.
 - CSS FOLDER
   - ADDED oldStyle.css for the old css style.
 - style.css
   - OVERHAULED gallery.html's css.
+  - OVERHAULED about.html's css.
 - main.js
   - ADDED slideshow & gallery code.
 

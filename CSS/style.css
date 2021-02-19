@@ -24,7 +24,7 @@
   --LightYellow: #fece48;
   --Orange: #ffb41f;
   --White: #ffffff;
-  --Black: #000000;
+  --Black: #111111;
   /* ------ */
 }
 
@@ -221,7 +221,7 @@ a {
 /* ---------- */
 
 /* Carousel */
-main .blog {
+.homeCarousel {
   background: var(--NavyBlue);
   background-repeat: no-repeat;
   background-position: right;
@@ -240,8 +240,17 @@ main .blog-post .blog-content {
   text-align: center;
   width: 80%;
   margin: 3rem 2rem;
+  /* padding: 3rem 2rem; */
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.homeCarousel .blog .blog-content {
   border-radius: 10px;
+}
+
+.homeCarousel .blog .blog-content img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 main .blog-content .blog-title {
@@ -330,6 +339,7 @@ section .container .owl-nav {
 .firstSection .firstSection-content .right img {
   margin-left: 80px;
   width: 450px;
+  object-fit: cover;
 }
 /* ------------- */
 /* <!------------------------------------------------------------------------------------> */
@@ -623,6 +633,109 @@ nav .items .item:hover {
 
 .shadow.show {
   display: block;
+}
+/* <!--------------------------------------------------------------------------------------> */
+/* <!--------------------------------------------------------------------------------------> */
+
+/* <!----------------------------------- ABOUT.HTML -------------------------------------> */
+/* <!------------------------------------ CAROUSEL --------------------------------------> */
+.teams {
+  height: 100vh;
+  padding: 100px 0;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* background: black; */
+  color: var(--White);
+  /* background: var(--Black); */
+}
+
+.teams .title {
+  text-align: center;
+  font-family: var(--OpenSansSemibold);
+  font-size: 40px;
+  letter-spacing: 1px;
+  /* margin-bottom: 60px; */
+  padding-bottom: 20px;
+  color: var(--NavyBlue);
+}
+
+.teams .carousel .card {
+  background: var(--NavyBlue);
+  border-radius: 10px;
+  padding: 60px 35px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover {
+  background: var(--DarkBlue);
+}
+
+.teams .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+
+.teams .carousel .card .text {
+  font-family: var(--OpenSansSemibold);
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+  transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover .text {
+  font-family: var(--OpenSansBold);
+  color: var(--Orange);
+}
+
+.teams .carousel .card p {
+  font-size: 18px;
+}
+
+.teams .carousel .card img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--White);
+  transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover img {
+  border-color: var(--Orange);
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid var(--NavyBlue) !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl.dot:hover {
+  background: var(--NavyBlue) !important;
 }
 /* <!--------------------------------------------------------------------------------------> */
 /* <!--------------------------------------------------------------------------------------> */
