@@ -2,10 +2,18 @@
 
 02/19/2021 [PAMONAG]
 
+- OVERHAULED gallery.html.
+- ADDED oldGallery.html for the old gallery structure.
 - IMAGES FOLDER
   - ADDED subfolder "galleryImages"
 - main.js
   - ADDED code for gallery.
+- CSS FOLDER
+  - ADDED oldStyle.css for the old css style.
+- style.css
+  - OVERHAULED gallery.html's css.
+- main.js
+  - ADDED slideshow & gallery code.
 
 Overall, just slowly pushing final front-end codes.
 

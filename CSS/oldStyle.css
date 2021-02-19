@@ -6,7 +6,6 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
-  font-family: var(--OpenSansRegular);
 }
 
 :root {
@@ -228,7 +227,6 @@ main .blog {
   background-position: right;
   height: 100vh;
   width: 100%;
-  background-size: 65%;
 }
 
 main .blog .blog-post {
@@ -243,6 +241,7 @@ main .blog-post .blog-content {
   width: 80%;
   margin: 3rem 2rem;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 main .blog-content .blog-title {
@@ -262,7 +261,8 @@ main .blog-content span {
 
 section .container .owl-nav {
   position: absolute;
-  top: 10%;
+  /* top: 10%; */
+  bottom: -5%;
   margin: 0 auto;
   width: 100%;
 }
@@ -335,7 +335,6 @@ section .container .owl-nav {
 /* <!------------------------------------------------------------------------------------> */
 
 /* <!------------------------------------------------------------------------------------> */
-
 /* <!----------------------------------- GALLERY.HTML -------------------------------------> */
 /* <!------------------------------------ GSLIDESHOW --------------------------------------> */
 .gSlideshow {
@@ -458,73 +457,408 @@ section .container .owl-nav {
   background: #ffffff;
 }
 /* <!--------------------------------------------------------------------------------------> */
-/* <!----------------------------------- IMAGE GALLERY ------------------------------------> */
-.imageGallery {
-  height: 100vh;
-  padding: 10px 0;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* background: black; */
+
+For the font body {
+  font-family: "Open Sans", sans-serif;
 }
 
-.wrapper {
-  margin: 0 auto;
+/* header design (Overflow==auto to include buttons) */
+/* nav {
+  background-color: #040562;
+  height: 70px;
+  overflow: hidden;
 }
 
-.wrapper .galleryTitle {
+label.logo {
+  float: left;
+  line-height: 70px;
+  padding: 0 50px;
+}
+
+nav ul {
+  float: left;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+} */
+
+/* for the hero, temporary included border to clarify its size */
+.home {
+  padding: 40px;
+}
+
+/* for the image in hero */
+.center {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+/* the login button in hero */
+.loginBtn {
+  width: 40%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: orange;
+  color: white;
+}
+
+/* temporary for the slide show */
+.slideshow {
+  background-color: #040562;
+  color: white;
   text-align: center;
-  padding-bottom: 20px;
+  height: 400px;
 }
 
-.wrapper nav {
-  display: flex;
+/* for footer */
+footer {
+  background-color: skyblue;
+  position: relative;
+  bottom: 0;
+  padding: 5px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* Add some top padding to the page content to prevent sudden quick movement 
+(as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 120px;
+}
+
+/* slogan in about page */
+.about_slogan {
+  text-align: center;
+  padding: 20px;
+}
+/* for the image in about page */
+.about_face {
+  max-width: 200px;
+  height: auto;
+  margin: auto;
+  border-radius: 100px;
+}
+
+/* for the info below image in about page */
+.about_info {
+  text-align: center;
+  background-color: #040562;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* for names in about page */
+.about_name {
+  padding: 20px;
+}
+
+/* for read more in about page */
+.about_button {
+  color: white;
+  float: right;
+  margin: 0px 0px 20px 0px;
+  bottom: 0;
+}
+
+/* Change color of read more in about page when hovered */
+.about_button:hover {
+  color: #ffb41f;
+}
+
+/* For Figures in Gallery */
+figure {
+  background-color: rgb(191, 230, 245);
+  padding: 5px;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+/* Figure Caption */
+.rowG figcaption {
+  text-align: center;
+}
+
+.colGC figcaption {
+  text-align: left;
+  font-size: small;
+}
+
+/* Style of the Previews in Gallery */
+.preview {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Creates grid for modal gallery images*/
+/* Modal gallery image properties*/
+.item1 {
+  grid-area: imgM;
+  text-align: center;
+  width: 100%;
+}
+
+.item2 {
+  grid-area: imgS;
+  text-align: center;
+}
+.item3 {
+  grid-area: imgS2;
+  text-align: center;
+}
+.item4 {
+  grid-area: imgS3;
+  text-align: center;
+}
+
+.rowG {
+  display: grid;
+  position: relative;
+  grid-template-rows: 150px 150px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "imgM imgM imgS imgS"
+    "imgM imgM imgS2 imgS3";
+  flex-direction: row;
+  justify-content: center;
+  grid-gap: 20px;
+}
+
+.rowG:after {
+  content: "";
+  display: grid;
+  clear: both;
+}
+
+.rowG > div {
+  align-content: center;
+}
+
+/* Carousel Image Properties*/
+.colGC {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+.rowGC {
+  display: inline-block;
   justify-content: center;
 }
 
-nav .items {
+.rowGC:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.rowGC > .colGC {
+  padding: 0 8px;
+}
+
+.rowGC nav {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.rowGC .botCarousel .items {
   display: flex;
   max-width: 720px;
   width: 100%;
   justify-content: space-between;
 }
 
-nav .items .item {
+.rowGC .botCarousel .items span {
   padding: 7px 25px;
   font-size: 18px;
-  font-family: var(--OpenSansBold);
-  color: var(--Black);
-  border: 2px solid var(--Black);
-  border-radius: 50px;
+  font-weight: 500;
   cursor: pointer;
+  color: #007bff;
+  border-radius: 50px;
+  border: 2px solid #007bff;
   transition: all 0.3s ease;
 }
 
-nav .items .active,
-nav .items .item:hover {
-  color: var(--White);
-  background: var(--Orange);
+.items span.active,
+.items span:hover {
+  color: #fff;
+  background: lightgreen;
 }
 
-.gallery {
+.rowGC .colGC.hide {
+  display: none;
+}
+.rowGC .colGC.show {
+  animation: animate 0.4s ease;
+}
+
+/* Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 10px 62px 0px 62px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: silver;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  /* margin-top: 10px; */
-  padding-top: 10px;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 0 0 0 0;
+  width: 80%;
+  max-width: 1200px;
 }
 
-.gallery .image {
-  padding: 7px;
-  width: calc(100% / 4);
-  margin-bottom: -20px;
-}
-
-.gallery .image.hide {
+/* Hide the slides by default */
+.slide {
   display: none;
 }
 
-.gallery .image.show {
-  display: block;
-  animation: animate 0.4s ease;
+.image-slide {
+  width: 100%;
+}
+
+.modal-preview {
+  width: 100%;
+}
+
+/* Bottom Images in Lightbox */
+.dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Misc. Image Properties in Gallery */
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Close Preview Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Hover Effects on Close Preview Button */
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Previous and Next Buttons when browsing images */
+.previous,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Additional Next Button Properties */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Hover Effects of Previous and Next Buttons */
+.previous:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Carousel Image View */
+.preview-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.preview-box.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+.preview-box .details {
+  padding: 13px 15px 13px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.details .title {
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+.details .title p {
+  font-weight: 500;
+  margin-left: 5px;
+}
+.details .icon {
+  color: #007bff;
+  font-style: 22px;
+  cursor: pointer;
+}
+.preview-box .image-box {
+  width: 100%;
+  display: flex;
+}
+.image-box img {
+  width: 100%;
+  border-radius: 0 0 3px 3px;
 }
 
 @keyframes animate {
@@ -536,92 +870,97 @@ nav .items .item:hover {
   }
 }
 
-.gallery .image span {
-  display: flex;
-  width: 100%;
-  height: 90%;
-  overflow: hidden;
+/*@media (max-width: 1000px) {
+  .colGC {
+    width: calc(100% / 3);
+  }
+}
+@media (max-width: 800px) {
+  .colGC {
+    width: 50%;
+  }
+}
+@media (max-width: 700px) {
+  .rowGC .botCarousel .items {
+    max-width: 600px;
+  }
+  .rowGC .botCarousel .items span {
+    padding: 7px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .rowGC {
+    margin: 30px auto;
+  }
+  .rowGC .botCarousel .items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .botCarousel .items span {
+    margin: 5px;
+  }
+  .colGC {
+    width: 100%;
+  }
+}*/
+
+/* content of contact page */
+.contact_form {
+  text-align: center;
+  margin: 50px auto 50px auto;
+  width: 50%;
 }
 
-.gallery .image img {
-  width: 100%;
-  /* height: 90%; */
-  vertical-align: middle;
-  transition: all 0.3s ease;
+/* h1 in Contact page */
+.contact_form > h1 {
+  color: #040562;
+  font-size: 46px;
 }
 
-.gallery .image:hover img {
-  transform: scale(1.1);
+/* h3 in Contact page */
+.contact_form > h3 {
+  color: #05053b;
+  margin: 10px auto 20px auto;
 }
 
-.preview-box {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  background: var(--White);
-  max-width: 700px;
-  width: 100%;
-  z-index: 1005;
-  opacity: 0;
-  pointer-events: none;
-  border-radius: 3px;
-  padding: 0 5px 5px 5px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-}
-
-.preview-box.show {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
-  transition: all 0.3s ease;
-}
-
-.preview-box .details {
-  display: flex;
-  align-items: center;
-  padding: 13px 15px 13px 10px;
-  justify-content: space-between;
-}
-
-.preview-box .details .title {
+/* p in Contact page */
+.contact_form > p {
+  color: #0247a1;
   font-size: 18px;
+}
+
+/* input forms in Contact page */
+.contact_input {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.details .title p {
-  margin-left: 5px;
-}
-
-.details .icon {
-  /* color: var(--Black); */
-  font-size: 22px;
-  cursor: pointer;
-}
-
-.preview-box .image-box {
-  display: flex;
+/* inputs in Contact page */
+.contact_input > input {
   width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #040562;
 }
 
-.image-box img {
+/* message in Contact page */
+.contact_input > textarea {
   width: 100%;
-  border-radius: 0 0 3px 3px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #040562;
+  resize: none;
 }
 
-.shadow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1000;
-  display: none;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.shadow.show {
+/* button in Contact page */
+.contact_form > button {
+  color: white;
+  background-color: #ffb41f;
   display: block;
+  width: 30%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #ffb41f;
 }
-/* <!--------------------------------------------------------------------------------------> */
-/* <!--------------------------------------------------------------------------------------> */
