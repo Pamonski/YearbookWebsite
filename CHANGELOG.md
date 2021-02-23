@@ -1,5 +1,12 @@
 # Changelog
 
+02/23/2021 [LIM]
+
+-contact.html
+  - Slight alterations to match updated style.css
+-style.css
+  - Re-added css for contact.html
+
 02/19/2021 [PAMONAG]
 
 - OVERHAULED gallery.html.
