@@ -1,5 +1,10 @@
 # Changelog
 
+02/24/2021 [LIM]
+
+-Created testContact.html
+-Created styleCon.css
+
 02/23/2021 [LIM]
 
 -contact.html
