@@ -2,9 +2,12 @@
 
 02/26/2021 [LIM]
 
--Created login.html
+- Created login.html
+- Renamed contact.html to oldContact.html
+- Renamed testContact.html to contact.html
 -style.css
   - Added css for login.html
+  - Integrated styleCon.css to style.css
 
 02/24/2021 [LIM]
 

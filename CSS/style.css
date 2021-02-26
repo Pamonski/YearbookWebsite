@@ -739,67 +739,84 @@ nav .items .item:hover {
 }
 /* <!--------------------------------------------------------------------------------------> */
 /* <!--------------------------------------------------------------------------------------> */
+/* <!----------------------------------- CONTACT -----------------------------------> */
 
-/* content of contact page */
-.contact_form {
+.contactBody{
+  width: 100%;
+  height: 100vh;
+  background: skyblue;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: table;
+}
+
+.contactHeader {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  margin: 0 auto 0px auto;
-  padding: 100px 0;
-  width: 50%;
 }
 
-/* h1 in Contact page */
-.contact_form > h1 {
-  color: #040562;
+.contactHeader h1{
   font-size: 46px;
+  color: #040562;
 }
 
-/* h3 in Contact page */
-.contact_form > h3 {
+.contactHeader h3{
   color: #05053b;
-  margin: 10px auto 20px auto;
+  margin: 10px 0;
 }
 
-/* p in Contact page */
-.contact_form > p {
+.contactHeader p{
+  font-size: 16px;
   color: #0247a1;
+}
+
+.contactForm{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.contactForm input{
+  width: 100%;
+  margin: 15px 0;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid #05053b;
+  font-size: 15px;
+}
+
+/*.contactForm textarea{
+  width: 100%;
+  margin: 15px 0;
+  color: #040562;
+  resize: none;
+  font-size: 15px;
+}*/
+
+.contactForm .button{
+  color: white;
+  background-color: #ffb41f;
+  display: inline-block;
+  width: 20%;
+  margin: 15px 0;
+  border-radius: 10px;
   font-size: 18px;
 }
 
-/* input forms in Contact page */
-.contact_input {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#msg{
+  margin-top: 60px;
 }
 
-/* inputs in Contact page */
-.contact_input > input {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  color: #040562;
-}
-
-/* message in Contact page */
-.contact_input > textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  color: #040562;
-  resize: none;
-}
-
-/* button in Contact page */
-.contact_form > button {
-  color: white;
-  background-color: #ffb41f;
-  display: block;
-  width: 30%;
-  margin: auto;
-  border-radius: 10px;
-  padding: 10px;
-  border: 2px solid #ffb41f;
+::placeholder{
+  letter-spacing: 2px;
+  color: black;
+  font-size: 16px;
 }
 
 /* <!--------------------------------------------------------------------------------------> */
