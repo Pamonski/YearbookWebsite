@@ -1,5 +1,11 @@
 # Changelog
 
+02/26/2021 [LIM]
+
+-Created login.html
+-style.css
+  - Added css for login.html
+
 02/24/2021 [LIM]
 
 -Created testContact.html
